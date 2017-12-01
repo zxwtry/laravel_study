@@ -164,14 +164,16 @@ Route::any('1119b/grammar/{query}', [
     'uses' => 'C1119bController@grammar'
 ]);
 
-//jquery
-Route::any('1119c/jquery/{query}', [
-    'uses' => 'C1119cController@url'
-]);
 
 //html class
 Route::any('1120a/html/{q}', [
     'uses' => 'C1120aController@html'
+]);
+
+
+//jquery
+Route::any('w3/jquery/{q}', [
+    'uses' => 'W3Controller@jquery'
 ]);
 
 /*

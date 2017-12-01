@@ -16,6 +16,10 @@ class C1120aController extends Controller {
             return view('C1120a/class');
         }
 
+        elseif ($q == 'img') {
+            return view('C1120a/img');
+        }
+
     }
 
 }
