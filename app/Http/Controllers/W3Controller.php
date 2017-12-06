@@ -15,4 +15,13 @@ class W3Controller extends Controller {
         return view('w3.jquery.' . $q);
     }
 
+    public function jquery_http($q) {
+        switch ($q) {
+            case "get":
+                exit("get_val");
+            case "post":
+                exit("post_val");
+        }
+    }
+
 }
