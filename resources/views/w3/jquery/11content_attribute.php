@@ -15,9 +15,10 @@
             console.log("btn2_id: text()" + $("#btn2_id").text());
             console.log("btn2_id: html()" + $("#btn2_id").html());
             console.log("btn2_id: val()" + $("#btn2_id").val());
+            console.log('p_id: attr("href")' + $("#p_id").attr('href'));
             /*
                 输出：
-                    p_id: text()这是段落中的粗体>文本
+                    p_id: text()这是段落中的粗体文本
                     p_id: html()这是段落中的<b>粗体</b>文本
                     p_id: val()
                     btn1_id: text()显示文本
@@ -26,21 +27,32 @@
                     btn2_id: text()显示
                     btn2_id: html()显示
                     btn2_id: val()
+                    p_id: attr("href")http://www.zxwtry.com
              */
-        });
 
+            $("#btn_change1_id").click(function() {
+                $("#p_id").html("<h1>你好世界</h1><h2>大家好</h2>");
+                $("#btn1_id").html("<h1>你好世界</h1><h2>大家好</h2>");
+            });
+
+            $("#btn_change2_id").click(function() {
+                $("#p_id").val("你好世界大家好");
+                // 这里设置不成功，原因未知
+                $("#btn1_id").val("你好世界大家好");
+            });
+        });
     </script>
 </head>
 
-
 <body>
-<p id="p_id">这是段落中的<b>粗体</b>文本</p>
+<button id="btn_change1_id">点击更改1</button>
+<button id="btn_change2_id">点击更改2</button>
+<p id="p_id" href="http://www.zxwtry.com">这是段落中的<b>粗体</b>文本</p>
 <button id="btn1_id">显示文本</button>
 <button id="btn2_id">显示</button>
 </body>
 
 </html>
-
 
 <!--
     jQuery DOM操作
@@ -52,7 +64,7 @@
     html() ： 设置或返回所选元素的内容（包括HTML标记）
     val()  ： 设置或返回表单字段的值
 
+    大概意思就是：html就是html中的样子，text就是显示的文本内容
 
     获取属性：attr()
-
 -->
