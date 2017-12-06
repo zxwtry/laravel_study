@@ -1,0 +1,2 @@
+welcome to laravel
+<p id="p1">i love laravel</p>
