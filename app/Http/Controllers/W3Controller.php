@@ -24,4 +24,8 @@ class W3Controller extends Controller {
         }
     }
 
+    public function css($q) {
+        return view('w3.css.' . $q);
+    }
+
 }

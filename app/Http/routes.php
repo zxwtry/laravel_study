@@ -181,6 +181,11 @@ Route::any('w3/jquery_http/{q}', [
     'uses' => 'W3Controller@jquery_http'
 ]);
 
+//css
+Route::any('w3/css/{q}', [
+    'uses' => 'W3Controller@css'
+]);
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
